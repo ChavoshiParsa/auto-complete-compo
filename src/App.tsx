@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import arrow from "../public/arrow-down-up.svg";
+import tick from "../public/tick.svg";
 
 type Data = {
   id: number;
@@ -71,11 +73,7 @@ function App() {
             setIsMenuOpen((prev) => !prev);
           }}
         >
-          <img
-            className="arrow"
-            src="/public/arrow-down-up.svg"
-            alt="arrow down up"
-          />
+          <img className="arrow" src={arrow} alt="arrow down up" />
         </button>
       </div>
       {loading && <span className="loader">Loading...</span>}
@@ -102,7 +100,7 @@ function App() {
               >
                 {selectedValue?.id === item.id && (
                   <div className="tick-container">
-                    <img className="tick" src="/public/tick.svg" alt="tick" />
+                    <img className="tick" src={tick} alt="tick" />
                   </div>
                 )}
                 <span
