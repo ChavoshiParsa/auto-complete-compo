@@ -59,7 +59,9 @@ function App() {
           onChange={(e) => {
             setIsMenuOpen(true);
             setFilteredData(
-              data.filter((item) => item.title.includes(e.target.value.trim()))
+              data.filter((item) =>
+                item.title.includes(e.target.value.toLowerCase().trim())
+              )
             );
           }}
         />
